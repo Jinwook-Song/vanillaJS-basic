@@ -1,2 +1,2 @@
-Array of => text => array
-Array.from() : array like object => array
+find: find first thing
+findIndex: fint first thing's index

@@ -1,24 +1,38 @@
-const friendsAsis = ["nico", "lynn", "dal", "mark"];
+const friends = [
+  "nico@gmail.com",
+  "lynn@naver.com",
+  "dal@yahoo.com",
+  "mark@hotmail.com",
+  "flynn@gorea.com",
+  "fillarray@korea.com",
+];
 
-const friendsTobe = Array.of("nico", "lynn", "dal", "mark");
+const check = () => friends.findIndex((friend) => friend.includes("gorea.com"));
 
-console.log(friendsAsis);
-console.log(friendsTobe);
+let target = check();
 
-const getarray = document.querySelectorAll("button");
+if (target !== -1) {
+  console.log(target);
 
-console.log(getarray);
+  const username = friends[target].split("@")[0];
 
-const buttonclass = document.getElementsByClassName("btn");
+  const email = "korea.com";
 
-console.log(buttonclass);
+  friends[target] = `${username}@${email}`;
 
-Array.from(buttonclass).forEach((buttonclass) => {
-  buttonclass.addEventListener("click", () =>
-    console.log("i have been clicked")
-  );
-});
+  target = check();
+}
+console.log(friends);
 
-buttonclass?.forEach((button) =>
-  button.addEventListener("click", () => console.log("clicked"))
-);
+const check2 = () => friends.findIndex((friend) => friend.includes("fill"));
+target = check2();
+
+if (target !== -1) {
+  friends.fill("*".repeat(5), target);
+}
+console.log(friends);
+
+friends.fill("*".repeat("5"), 1, 3);
+console.log(friends);
+
+console.log(friends.includes("nico@gmail.com"));
