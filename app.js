@@ -1,12 +1,24 @@
-const wrapper = document.querySelector(".wrapper");
+const friendsAsis = ["nico", "lynn", "dal", "mark"];
 
-const addWelcome = () => {
-  const div = `
-    <div class="hello">
-      <h1 class="title">Hello~</h1>
-    </div>
-  `;
-  wrapper.innerHTML = div;
-};
+const friendsTobe = Array.of("nico", "lynn", "dal", "mark");
 
-setTimeout(addWelcome, 2000);
+console.log(friendsAsis);
+console.log(friendsTobe);
+
+const getarray = document.querySelectorAll("button");
+
+console.log(getarray);
+
+const buttonclass = document.getElementsByClassName("btn");
+
+console.log(buttonclass);
+
+Array.from(buttonclass).forEach((buttonclass) => {
+  buttonclass.addEventListener("click", () =>
+    console.log("i have been clicked")
+  );
+});
+
+buttonclass?.forEach((button) =>
+  button.addEventListener("click", () => console.log("clicked"))
+);
