@@ -1,18 +1,5 @@
-const settings = {
-  notifications: {
-    follow: true,
-    alerts: true,
-    unfolow: false,
-  },
-  color: {
-    theme: "dark",
-  },
-};
+const days = ["Mon", "Tue", "Wed"];
 
-const {
-  notifications: { follow = false }, // default
-  color,
-} = settings;
+const [mon, tue, wed, thu = "Thu"] = days;
 
-console.log(follow);
-console.log(color);
+console.log(mon, tue, wed, thu);
